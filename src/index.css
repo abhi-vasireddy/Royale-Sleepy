@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-warm-white text-charcoal font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    @apply bg-gold/20 text-gold-dark;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #B8973C 0%, #D4AF6A 50%, #B8973C 100%);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, #B8973C 0%, #D4AF6A 50%, #8B6F2A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .luxury-shadow {
+    box-shadow: 0 4px 40px rgba(184, 151, 60, 0.15);
+  }
+  .card-shadow {
+    box-shadow: 0 2px 20px rgba(44, 44, 44, 0.08);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 8px 40px rgba(44, 44, 44, 0.15);
+  }
+}
+
+/* Swiper overrides */
+.swiper-pagination-bullet {
+  @apply bg-gold opacity-50;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-gold opacity-100;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-beige;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/50 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold;
+}
